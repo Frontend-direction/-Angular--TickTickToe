@@ -1,0 +1,15 @@
+<!-- <div>
+  @for (cell of [1,2,3] | async; track trackCell) {
+    <div>{{ cell.cell }}</div>
+  }
+</div> -->
+
+<ng-container
+  *ngIf="board$ | async as board"
+>
+  <div *ngFor="let row of board">
+    <div *ngFor="let cell of row">
+      {{ cell.cellNo }}
+    </div>
+  </div>
+</ng-container>
